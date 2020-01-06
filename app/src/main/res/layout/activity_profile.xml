@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    tools:context=".ProfileActivity">
+
+    <Button
+        android:id="@+id/SignOutButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:onClick="signOut"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/ProfileNameTVId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Name"
+        android:textColor="#406ac4"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/SignOutButtonId"
+        />
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#5c6da7"
+        android:weightSum="4"
+        android:layout_marginBottom="1dp"
+        android:layout_below="@id/ProfileNameTVId"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total meal :"
+            android:textColor="#fff"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/TotalMealTVId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total debit :"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/TotalDebitTVId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#5c6da7"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/first">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Status :"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/CurrentStatusTVId"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#f9425d"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="3dp"
+        android:background="#5c6da7"
+        android:layout_marginBottom="3dp"
+        android:layout_below="@+id/second">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#ffd"
+            android:textStyle="bold"
+            android:text="Date"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Lunch"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="Dinner"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="Debit"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/DailyStatusListViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stackFromBottom="true"
+        android:layout_below="@+id/third">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNew"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_add_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" />
+
+
+</RelativeLayout>
